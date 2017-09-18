@@ -39,7 +39,7 @@ function peticionImagenes(elem, callback) {
     var img;
     console.log(elem);
     $.ajax({
-        url: 'https://fathomless-cove-24634.herokuapp.com/imagenes/'+elem,
+        url: 'https://fathomless-cove-24634.herokuapp.com/imagenes/'+elem.id,
         type: 'GET',
         data: elem,
         cache: false,
@@ -61,7 +61,7 @@ function peticionImagenesPreguntas(elem, callback) {
     var objImg;
     console.log(elem);
     $.ajax({
-        url: 'https://fathomless-cove-24634.herokuapp.com/imagenesPreguntas/'+elem,
+        url: 'https://fathomless-cove-24634.herokuapp.com/imagenesPreguntas/'+elem.id,
         type: 'GET',
         data: elem,
         cache: false,
@@ -83,7 +83,7 @@ function peticionPreguntas(elem, callback) {
     var objPre;
     console.log(elem);
     $.ajax({
-        url: 'https://fathomless-cove-24634.herokuapp.com/preguntas/'+elem,
+        url: 'https://fathomless-cove-24634.herokuapp.com/preguntas/'+elem.id,
         type: 'GET',
         data: elem,
         cache: false,
@@ -107,7 +107,7 @@ function peticionAudios(elem, callback) {
     var audio;
     console.log(elem);
     $.ajax({
-        url: 'https://fathomless-cove-24634.herokuapp.com/audios/'+elem,
+        url: 'https://fathomless-cove-24634.herokuapp.com/audios/'+elem.id,
         type: 'GET',
         data: elem,
         cache: false,
