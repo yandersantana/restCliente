@@ -317,8 +317,8 @@ function enviarActualizar(user, callback) {
         success: function (data) {
             $(this).slideUp(300).delay(2000).fadeIn(400);
             $.ajax({
-                url: '/idPreguntaCuento',
-                type: 'POST',
+                url: 'https://fathomless-cove-24634.herokuapp.com/idPreguntaCuento/'+cuentero.idcuento,
+                type: 'GET',
                 // Form data
                 //datos del formulario
                 data: cuentero,
