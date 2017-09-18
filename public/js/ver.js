@@ -40,7 +40,7 @@ function peticionImagenes(elem, callback) {
     console.log(elem);
     $.ajax({
         url: 'https://fathomless-cove-24634.herokuapp.com/imagenes/'+elem,
-        type: 'POST',
+        type: 'GET',
         data: elem,
         cache: false,
 
