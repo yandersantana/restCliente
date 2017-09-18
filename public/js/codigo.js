@@ -226,7 +226,7 @@ function enviarActualizarUsuario(user, callback) {
     console.log("ESTOY ENVIANDO" + usuario.idusuario + usuario.name + usuario.username);
     $.ajax({ //vamos guardando las imagenes del cuento
         url: 'https://fathomless-cove-24634.herokuapp.com/guardarUsuarioActualizado',
-        type: 'POST',
+        type: 'PUT',
         data: usuario,
         cache: false,
         success: function (data) {
@@ -250,7 +250,7 @@ function enviarEliminarUsuario(callback) {
     }
     $.ajax({ //vamos guardando las imagenes del cuento
         url: 'https://fathomless-cove-24634.herokuapp.com/eliminarUsuario',
-        type: 'POST',
+        type: 'DELETE',
         data: usuario,
         cache: false,
         success: function (data) {
@@ -276,7 +276,7 @@ function actualizaImagenesEnviar(imagen, imaAactualizar) {
 
     $.ajax({ //vamos guardando las imagenes del cuento
         url: 'https://fathomless-cove-24634.herokuapp.com/guardarImagenesActualizadas',
-        type: 'POST',
+        type: 'PUT',
         data: imagenesCuento,
         cache: false,
         success: function (data) {
@@ -311,7 +311,7 @@ function enviarActualizar(user, callback) {
     alert(cuentero.audios);*/
     $.ajax({
         url: 'https://fathomless-cove-24634.herokuapp.com/guardarCuentoActualizar',
-        type: 'POST',
+        type: 'PUT',
         data: cuentero,
         cache: false,
         success: function (data) {
@@ -336,7 +336,7 @@ function enviarActualizar(user, callback) {
                         };
                         $.ajax({
                             url: 'https://fathomless-cove-24634.herokuapp.com/eliminarImgPregCuento',
-                            type: 'POST',
+                            type: 'DELETE',
                             data: elem2,
                             cache: false,
 
@@ -347,7 +347,7 @@ function enviarActualizar(user, callback) {
                                 $(this).slideUp(300).delay(2000).fadeIn(400);
                                 $.ajax({
                                     url: 'https://fathomless-cove-24634.herokuapp.com/eliminarImagenesCuento',
-                                    type: 'POST',
+                                    type: 'DELETE',
                                     data: cuentero,
                                     cache: false,
 
@@ -358,7 +358,7 @@ function enviarActualizar(user, callback) {
                                         $(this).slideUp(300).delay(2000).fadeIn(400);
                                         $.ajax({
                                             url: 'https://fathomless-cove-24634.herokuapp.com/eliminarAudiosCuento',
-                                            type: 'POST',
+                                            type: 'DELETE',
                                             data: cuentero,
                                             cache: false,
 
@@ -368,7 +368,7 @@ function enviarActualizar(user, callback) {
                                                 $(this).slideUp(300).delay(2000).fadeIn(400);
                                                 $.ajax({
                                                     url: 'https://fathomless-cove-24634.herokuapp.com/eliminarPreguntasCuento',
-                                                    type: 'POST',
+                                                    type: 'DELETE',
                                                     data: cuentero,
                                                     cache: false,
 
@@ -1071,7 +1071,7 @@ $(this).slideUp(300).delay(2000).fadeIn(400);
                      $(this).slideUp(300).delay(2000).fadeIn(400);
                     $.ajax({
                         url: 'https://fathomless-cove-24634.herokuapp.com/eliminarImgPregCuento',
-                        type: 'POST',
+                        type: 'DELETE',
                         data: elem2,
                         cache: false,
                         success: function (data) {
@@ -1089,7 +1089,7 @@ $(this).slideUp(300).delay(2000).fadeIn(400);
                     console.log("soy yd cuento " + elem.idcuento);
                     $.ajax({
                         url: 'https://fathomless-cove-24634.herokuapp.com/eliminarPreguntasCuento',
-                        type: 'POST',
+                        type: 'DELETE',
                         data: elem2,
                         cache: false,
 
@@ -1120,7 +1120,7 @@ $(this).slideUp(300).delay(2000).fadeIn(400);
      $(this).slideUp(300).delay(2000).fadeIn(400);
     $.ajax({
         url: 'https://fathomless-cove-24634.herokuapp.com/eliminarAudiosCuento',
-        type: 'POST',
+        type: 'DELETE',
         data: elem,
         cache: false,
 
@@ -1138,7 +1138,7 @@ $(this).slideUp(300).delay(2000).fadeIn(400);
     $.ajax({
         url: 'https://fathomless-cove-24634.herokuapp.com/eliminarImagenesCuento',
 
-        type: 'POST',
+        type: 'DELETE',
         data: elem,
         cache: false,
 
@@ -1160,7 +1160,7 @@ $(this).slideUp(300).delay(2000).fadeIn(400);
      console.log("hola soy elem"+elem.idcuento);
     $.ajax({
         url: 'https://fathomless-cove-24634.herokuapp.com/eliminarCuento',
-        type: 'POST',
+        type: 'DELETE',
         data: copiaEle,
         cache: false,
 
