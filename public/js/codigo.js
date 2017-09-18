@@ -1056,8 +1056,8 @@ function deleteCuento(id) {
     //alert("Hola eliminar cuento mii" );
 $(this).slideUp(300).delay(2000).fadeIn(400);
     $.ajax({
-        url: 'https://fathomless-cove-24634.herokuapp.com/idPreguntaCuento', //traera las preguntas qye pertenezcan a esa historia
-        type: 'POST',
+        url: 'https://fathomless-cove-24634.herokuapp.com/idPreguntaCuento/'+id, //traera las preguntas qye pertenezcan a esa historia
+        type: 'GET',
         data: elem,
         cache: false,
         success: function (data) {
